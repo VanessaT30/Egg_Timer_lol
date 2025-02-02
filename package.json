@@ -1,0 +1,28 @@
+{
+  "name": "eggtimer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "nodemon dist/index.js",
+    "preserve": "npm run build",
+    "serve": "concurrently \"npx tsc -w\" \"nodemon dist/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.0",
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2",
+    "rimraf": "^6.0.1"
+  }
+}
