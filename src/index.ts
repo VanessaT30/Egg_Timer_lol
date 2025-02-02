@@ -19,4 +19,4 @@ app.get("/", (req: Request, res: Response) => {
 // listen for incoming requests on port 3000 and logs successful message to the console
 app.listen(port, () => {
     console.log ("Server Started on port 3000")
-  }
+  });
