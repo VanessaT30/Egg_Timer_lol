@@ -40,22 +40,41 @@ const express_1 = __importDefault(require("express"));
 const path = __importStar(require("path"));
 const app = (0, express_1.default)();
 const port = 3000;
-// Implementing a template engine - serves dynamic pages
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-const publicDirectory = path.join(__dirname, './public');
-app.use(express_1.default.static(publicDirectory));
+// // Implementing a template engine - serves dynamic pages
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+// Serve static files (including `dist/timer.js`)
+app.use(express_1.default.static(path.join(__dirname, '/src')));
 app.use(express_1.default.static('public'));
+app.use(express_1.default.static('dist'));
+app.use(express_1.default.static(path.join(__dirname, "dist")));
 // Render the main page
 app.get("/", (req, res) => {
     // res.sendFile(path.join(publicDirectory, 'index.html'))
-    res.render("index");
-    // res.send("Hi there this is from HTML");
+    res.sendFile(path.join(__dirname, "/views/index.html"));
+});
+// Serve HTML files
+app.get("/boiled", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/boiled.html")); // Uses boiled.ejs
+});
+app.get("/fried", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/fried.html"));
+});
+app.get("/poached", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/poached.html"));
+});
+app.get("/scrambled", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/scrambled.html"));
 });
 // listen for incoming requests on port 3000 and logs successful message to the console
 app.listen(port, () => {
     console.log(`Server Started on port ${port}`);
 });
+// const friedEggs = document.getElementById('boiled') as HTMLButtonElement;
+// friedEggs.addEventListener("click", () => {window.location.href = '/boiled'});
+function navigate(location) {
+    window.location.href = location;
+}
 // time: int = 
 // any time = document.getElementById("timer");
 // onclick

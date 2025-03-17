@@ -3,8 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="dist/index.js"></script>
+    <script src="/index.js"></script>
     <link rel="stylesheet" href="/styles/index.css" />
+    <!-- <link rel="stylesheet" href="/public/styles/index.css" /> -->
     <!-- <link rel="stylesheet" href="./images" /> -->
   </head>
   <body>
@@ -27,21 +28,27 @@
  
         <fried-egg class="egg-types">
           <img src="/images/FriedEgg.jpg" alt="Yummy Fried Eggs" />
-          <button class="cute-buttons">Fried Egg</button></fried-egg>
+          <a href="/fried" class="eggs-Link">Fried Eggs</a>
+          <!-- <button type="button" id="fried" class="cute-buttons">Fried Egg</button> -->
+          
+        </fried-egg>
 
         <boiled-egg  class="egg-types">
           <img src="/images/Boiled.jpg" alt="Yummy Boiled Eggs" />
-          <button class="cute-buttons">Boiled Egg</button>
+          <!-- <button type="button" onclick="navigate('/boiled')" class="cute-buttons">Boiled Egg</button> -->
+          <a href="/boiled" class="eggs-Link">Boiled Eggs</a>
         </boiled-egg>
 
         <poached-egg class="egg-types">
           <img src="/images/Poached2.jpg" alt="Yummy Poached Eggs" />
-          <button class="cute-buttons">Poached Egg</button>
+          <!-- <button type="button" id="poached" class="cute-buttons">Poached Egg</button> -->
+          <a href="/poached" class="eggs-Link">Poached Eggs</a>
         </poached-egg>
         
         <scrambled-egg class="egg-types">
           <img src="/images/ScramEggs.jpeg" alt="Yummy Scrambled Eggs" />
-          <button class="cute-buttons">Scrambled Egg</button>
+          <!-- <button type="button" id="scrambled" class="cute-buttons">Scrambled Egg</button> -->
+          <a href="/scrambled" class="eggs-Link">Scrambled Eggs</a>
         </scrambled-egg>
 
       </div>

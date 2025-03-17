@@ -58,6 +58,36 @@ body {
     
 }
 
+img {
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+a.eggs-Link {
+    background-color: #eacf96;
+    display: block;
+    /* min-width: 150px; */
+    text-decoration: none;
+    margin: 5px;
+    color: #e28223;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid ;
+    box-sizing: content-box;
+    transition: color 0.3s ease; /* Smooth transition */
+    padding: 2px 40px;
+    justify-self: anchor-center; /* best css ever?? */
+    align-items: center;
+}
+
+a.eggs_Link:hover {
+  background-color: #e28223;
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+/* 
 .cute-buttons {
     background-color: #eacf96;
     margin: 10px 0 0 0;
@@ -69,12 +99,12 @@ body {
     width: 200px;
     height:30px;
     padding: 50px, 50px, 50px, 50px
-}
-.cute-buttons:hover {
+} */
+/* .cute-buttons:hover {
     size: 100px;
     color: #e28223;
 
-}
+} */
 
 .eggs {
   justify-content: space-evenly;
@@ -82,24 +112,26 @@ body {
   box-sizing: border-box;
   display: grid;
   align-items: center;
-  margin-left: 80;
-  margin-right: 80;
+  /* margin-left: 80;
+  margin-right: 80; */
   /* grid-template-columns: auto auto; */
   grid-template-columns: repeat(2, 20rem); /* same as "6rem 6rem 6rem" */
   grid-template-rows: repeat(2, 18rem);
   border: 2px solid black;
+  border-radius: 50px;
 }
 
 .eggs .egg-types {
   padding: 50px;
-}
-.egg-types img {
+} 
+
+/* img.egg-types {
   justify-content: center;
     width: 250px;
     height: auto;
     border: 2px solid black;
     border-radius: 5px;
-}
+} */
 
 
 

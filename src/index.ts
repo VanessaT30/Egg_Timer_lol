@@ -9,9 +9,11 @@ const port = 3000;
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'ejs');
 
-const publicDirectory = path.join(__dirname, './src');
-app.use(express.static(publicDirectory));
+// Serve static files (including `dist/timer.js`)
+app.use(express.static(path.join(__dirname, '/src')));
 app.use(express.static('public'))
+app.use(express.static('dist'))
+app.use(express.static(path.join(__dirname, "dist")));
 
 
 
@@ -21,6 +23,7 @@ app.get("/", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
+// Serve HTML files
 app.get("/boiled", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "/views/boiled.html"));// Uses boiled.ejs
 });
@@ -41,14 +44,16 @@ app.get("/scrambled", (req: Request, res: Response) => {
 
 // listen for incoming requests on port 3000 and logs successful message to the console
 app.listen(port, () => {
-    console.log (`Server Started on port ${port}`);
-  });
+  console.log (`Server Started on port ${port}`);
+});
 
-function navigate() {
-  window.location.href;
-  if {
-    
-  }
+// const friedEggs = document.getElementById('boiled') as HTMLButtonElement;
+// friedEggs.addEventListener("click", () => {window.location.href = '/boiled'});
+
+
+
+function navigate(location: string) {
+  window.location.href = location
 }
 
 

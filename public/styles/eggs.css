@@ -20,7 +20,7 @@
   display: flex;
   align-content: center;
   /* flex-basis: 100%; */
-  border: 2px solid black;
+  border-bottom: 2px solid rgb(214, 86, 0);
   justify-content: space-evenly;
   color: #e28223;
   background-color: #efb728;
@@ -65,7 +65,8 @@ body {
   align-items: center;
   margin-left: 150;
   margin-right: 150;
-  border: 2px solid black;
+  border: 2px solid rgb(247, 100, 2);
+  border-radius: 50px;
 }
 
 .timer-container {
@@ -116,19 +117,42 @@ body {
   height: auto;
 }
 
-.back-button .cute-buttons {
+/* .cute-buttons {
   display: grid;
   justify-content: center;
+} */
+
+.buttons.cute-buttons:hover {
+  /* size: 300px;
+  color: #e28223; */
+  width: 300px;  /* Changes the button width */
+  height: 300px; /* Changes the button height */
+  color: #e28223; /* Changes the text color */
 }
 
 .cute-buttons:hover {
-  size: 300px;
-  color: #e28223;
+  background-color: #e28223; 
+  color: white; 
+  transform: scale(1.1); 
+  transition: all 0.3s ease-in-out; 
+} 
+  
+/* Smooth effect *//* Slightly enlarge *//* Change text color *//* Change background color */
 
+/* This doesnt work */
+.buttons button:hover {
+  background-color: #5c23e2; 
+  color: white; 
+  transform: scale(1.1); 
+  transition: all 0.3s ease-in-out; 
+} 
+
+button:hover {
+  background-color: #e28223;
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
 }
-
-
-
 
 
 
