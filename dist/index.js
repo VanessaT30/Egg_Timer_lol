@@ -40,19 +40,18 @@ const express_1 = __importDefault(require("express"));
 const path = __importStar(require("path"));
 const app = (0, express_1.default)();
 const port = 3000;
+// Implementing a template engine - serves dynamic pages
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+const publicDirectory = path.join(__dirname, './public');
+app.use(express_1.default.static(publicDirectory));
+app.use(express_1.default.static('public'));
 // Render the main page
 app.get("/", (req, res) => {
-    // res.render("index.html");
+    // res.sendFile(path.join(publicDirectory, 'index.html'))
+    res.render("index");
     // res.send("Hi there this is from HTML");
-    res.sendFile(path.join(__dirname, './src/index.html'));
 });
-const publicDirectory = path.join(__dirname, './public');
-// app.use (express.json());
-app.use(express_1.default.static(publicDirectory));
-// app.use(express.urlencoded({ extended: false }));
-// Implementing a template engine
-app.set('src', path.join(__dirname, 'src'));
-// app.set('view engine', 'html');
 // listen for incoming requests on port 3000 and logs successful message to the console
 app.listen(port, () => {
     console.log(`Server Started on port ${port}`);
