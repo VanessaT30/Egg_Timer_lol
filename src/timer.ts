@@ -53,8 +53,8 @@ class Timer {
 
     reset() {
         this.pause();
-        this.seconds = initialTime;
-        this.updateDisplay();
+        this.seconds = initialTime;// Reset to initial time
+        this.updateDisplay(); // Update the display
         }
 }
 
@@ -63,10 +63,6 @@ const timer = new Timer(); // Start with 90 seconds
 
 startButton.addEventListener("click", () => timer.start());
 pauseButton.addEventListener("click", () => timer.pause());
-resetButton.addEventListener("click", () => {
-    timer.pause();
-    timer.seconds = initialTime;  // Reset to initial time
-    timer.updateDisplay();  // Update the display
+resetButton.addEventListener("click", () => timer.reset());
 goBackButton.addEventListener("click", () => {window.location.href = '/'});
-});
 
