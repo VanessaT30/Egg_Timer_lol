@@ -25,7 +25,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // Serve HTML files
 app.get("/boiled", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "/views/boiled.html"));// Uses boiled.ejs
+  res.sendFile(path.join(__dirname, "/dist/views/boiled.html"));// Uses boiled.ejs
 });
 
 app.get("/fried", (req: Request, res: Response) => {
